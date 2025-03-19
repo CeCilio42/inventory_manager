@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'screens/add_product_screen.dart';
+import 'screens/check_product_screen.dart';
+import 'screens/check_inventory_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -52,7 +54,10 @@ class HomeScreen extends StatelessWidget {
                 minimumSize: const Size(200, 50),
               ),
               onPressed: () {
-                // TODO: Implement Check Product screen
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const CheckProductScreen()),
+                );
               },
               child: const Text('Check Product'),
             ),
@@ -62,7 +67,10 @@ class HomeScreen extends StatelessWidget {
                 minimumSize: const Size(200, 50),
               ),
               onPressed: () {
-                // TODO: Implement Check Inventory screen
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const CheckInventoryScreen()),
+                );
               },
               child: const Text('Check Inventory'),
             ),
